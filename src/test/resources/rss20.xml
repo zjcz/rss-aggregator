@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <description>RSS Feed Description</description>
+        <link>http://www.example.com</link>
+        <title>RSS Feed Title</title>
+        <category domain="Category 1 Domain">Category 1</category>
+        <category domain="Category 2 Domain">Category 2</category>
+        <cloud domain="http://www.example.com"
+               path="/path"
+               port="123"
+               protocol="RSS Feed Cloud Protocol"
+               registerProcedure="RSS Feed Cloud Register Procedure"
+               />
+        <copyright>RSS Feed Copyright</copyright>
+        <docs>https://www.rssboard.org/rss-specification</docs>
+        <generator>RSS Feed Generator</generator>
+        <image>
+            <link>http://www.example.com/image</link>
+            <title>RSS Feed Image Title</title>
+            <url>http://www.example.com/image/url</url>
+            <description>RSS Feed Image Description</description>
+            <height>100</height>
+            <width>200</width>
+        </image>
+        <language>RSS Feed Language</language>
+        <lastBuildDate>Wed, 06 Sep 2023 14:35:08 GMT</lastBuildDate>
+        <managingEditor>RSS Feed Managing Editor</managingEditor>
+        <pubDate>Wed, 06 Sep 2023 14:35:08 GMT</pubDate>
+        <rating>RSS Feed Rating</rating>
+        <skipDays>
+            <day>Monday</day>
+            <day>Friday</day>
+        </skipDays>
+        <skipHours>
+            <hour>1</hour>
+            <hour>23</hour>
+        </skipHours>
+        <ttl>100</ttl>
+        <webMaster>RSS Feed WebMaster</webMaster>
+        <item>
+            <author>RSS Feed Item 1 Author</author>
+            <category domain="RSS Feed Item 1 Category 1 Domain">RSS Feed Item 1 Category 1</category>
+            <category domain="RSS Feed Item 1 Category 2 Domain">RSS Feed Item 1 Category 2</category>
+            <comments>http://www.example.com/newsitem1/comments</comments>
+            <description>RSS Feed Item 1 Description</description>
+            <enclosure length="100" type="audio/mpeg" url="http://www.example.com/newsitem1/audio1.mp3" />
+            <enclosure length="100" type="audio/mpeg" url="http://www.example.com/newsitem1/audio2.mp3" />
+            <guid isPermaLink="false">http://www.example.com/newsitem1guid</guid>
+            <link>http://www.example.com/newsitem1</link>
+            <pubDate>Wed, 06 Sep 2023 14:35:08 GMT</pubDate>
+            <source url="http://www.example.com/newsitem1source">RSS Feed Item 1 Source</source>
+            <title>RSS Feed Item 1 Title</title>
+        </item>
+        <item>
+            <author>RSS Feed Item 2 Author</author>
+            <category domain="RSS Feed Item 2 Category 1 Domain">RSS Feed Item 2 Category 1</category>
+            <category domain="RSS Feed Item 2 Category 2 Domain">RSS Feed Item 2 Category 2</category>
+            <comments>http://www.example.com/newsitem2/comments</comments>
+            <description>RSS Feed Item 2 Description</description>
+            <enclosure length="100" type="audio/mpeg" url="http://www.example.com/newsitem2/audio1.mp3" />
+            <enclosure length="100" type="audio/mpeg" url="http://www.example.com/newsitem2/audio2.mp3" />
+            <guid isPermaLink="false">http://www.example.com/newsitem2guid</guid>
+            <link>http://www.example.com/newsitem2</link>
+            <pubDate>Wed, 06 Sep 2023 14:35:08 GMT</pubDate>
+            <source url="http://www.example.com/newsitem2source">RSS Feed Item 2 Source</source>
+            <title>RSS Feed Item 2 Title</title>
+        </item>
+
+    </channel>
+</rss>
