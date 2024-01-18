@@ -1,12 +1,32 @@
-package dev.jonclarke.rssaggregator.feedloader;
+package dev.jonclarke.rssaggregator.data;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
+
+@Entity
 public class FeedImage {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String link;
     private String title;
     private String url;
     private String description;
     private Integer height;
     private Integer width;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "feed_id")
+    @JsonBackReference
+    private Feed feed;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getLink() {
         return link;
@@ -55,4 +75,13 @@ public class FeedImage {
     public void setWidth(final Integer width) {
         this.width = width;
     }
+
+    public Feed getFeed() {
+        return feed;
+    }
+
+    public void setFeed(Feed feed) {
+        this.feed = feed;
+    }
+
 }

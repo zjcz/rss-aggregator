@@ -1,5 +1,6 @@
 package dev.jonclarke.rssaggregator.feedloader;
 
+import dev.jonclarke.rssaggregator.data.*;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -117,8 +118,7 @@ public class FeedLoaderRSS20Test extends FeedLoaderTest {
         assertEquals("RSS Feed Item 1 Title", item.getTitle());
 
         FeedItemSource source = item.getSource();
-        assertEquals("http://www.example.com/newsitem1source", source.getUri());
-        assertEquals("http://www.example.com/newsitem1source", source.getLink());
+        assertEquals("http://www.example.com/newsitem1source", source.getUrl());
         assertEquals("RSS Feed Item 1 Source", source.getTitle());
 
         List<FeedCategory> categories = item.getCategories();
@@ -142,8 +142,7 @@ public class FeedLoaderRSS20Test extends FeedLoaderTest {
         assertEquals("RSS Feed Item 2 Title", item.getTitle());
 
         source = item.getSource();
-        assertEquals("http://www.example.com/newsitem2source", source.getUri());
-        assertEquals("http://www.example.com/newsitem2source", source.getLink());
+        assertEquals("http://www.example.com/newsitem2source", source.getUrl());
         assertEquals("RSS Feed Item 2 Source", source.getTitle());
 
         categories = item.getCategories();

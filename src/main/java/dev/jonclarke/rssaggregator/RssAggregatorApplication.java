@@ -9,5 +9,4 @@ public class RssAggregatorApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RssAggregatorApplication.class, args);
 	}
-
 }
