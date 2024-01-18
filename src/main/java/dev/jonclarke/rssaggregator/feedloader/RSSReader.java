@@ -1,5 +1,7 @@
 package dev.jonclarke.rssaggregator.feedloader;
 
+import dev.jonclarke.rssaggregator.data.Feed;
+
 import java.io.Reader;
 
 /**

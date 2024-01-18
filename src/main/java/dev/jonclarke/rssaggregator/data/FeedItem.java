@@ -1,21 +1,47 @@
-package dev.jonclarke.rssaggregator.feedloader;
+package dev.jonclarke.rssaggregator.data;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class FeedItem {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String author;
-    private List<FeedCategory> category;
+    @OneToMany(mappedBy = "feedItem", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<FeedCategory> category = new ArrayList<>();
     private String comments;
     private String description;
+    @OneToMany(mappedBy = "feedItem", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<FeedItemEnclosure> enclosures;
     private String guid;
     private String link;
     private Timestamp pubDate;
     private Timestamp updatedDate;
+    @OneToOne(mappedBy = "feedItem", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private FeedItemSource source;
     private String title;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "feed_id")
+    @JsonBackReference
+    private Feed parentFeed;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getAuthor() {
         return author;
@@ -104,5 +130,13 @@ public class FeedItem {
 
     public void setTitle(final String title) {
         this.title = title;
+    }
+
+    public Feed getParentFeed() {
+        return parentFeed;
+    }
+
+    public void setParentFeed(Feed feed) {
+        this.parentFeed = feed;
     }
 }
